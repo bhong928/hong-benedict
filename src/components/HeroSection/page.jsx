@@ -17,7 +17,7 @@ export default function HeroSection() {
         className="absolute inset-0 z-0"
       >
         <Image
-          src="/images/Me&Dog.jpg"
+          src="/images/me.jpg"
           alt="Picture of Benedict"
           fill
           priority
