@@ -1,30 +1,38 @@
-import Image from "next/image";
+'use client';
 
-export default function HeroSection(){
+import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
-    return(
-        <section className="relative w-full h-[100vh] overflow-hidden">
-        {/* Add Picture of Me */}
-            <Image
-                src="/images/Me&Dog.JPG"
-                alt="Picture of Benedict"
-                fill
-                priority
-                className="object-cover"
-            />
+export default function HeroSection() {
+  const ref = useRef(null);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], [0, 175]); // Adjust values as needed
 
-        {/* Content on top of image */}
-            <div className="relative flex flex-col items-center justify-center h-full text-center text-white px-6">
-                <h1 className="text-4xl font-bold">
-                Hello, I am Benedict!
-                </h1>
-                <p className="mt-4 text-lg">
-                Developer, Michigan Alumni, and Musician
-                </p>
-                <button className="bg-white mt-8 text-black rounded-full px-6 py-2 hover:bg-gray-300 transition">
-                Discover More
-                </button>
-            </div>
-        </section>
-    )
+  return (
+    <section ref={ref} className="relative w-full h-screen overflow-hidden">
+      {/* Animated Background */}
+      <motion.div
+        style={{ y }}
+        className="absolute inset-0 z-0"
+      >
+        <Image
+          src="/images/Me&Dog.jpg"
+          alt="Picture of Benedict"
+          fill
+          priority
+          className="object-cover"
+        />
+      </motion.div>
+
+      {/* Foreground Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
+        <h1 className="text-4xl font-bold">Hello, I am Benedict!</h1>
+        <p className="mt-4 text-lg">Developer, Michigan Alumni, and Musician</p>
+        <a href="#about" className="mt-8 bg-white text-black rounded-full px-6 py-2 hover:bg-gray-300 transition cursor-pointer">
+          Discover More
+        </a>
+      </div>
+    </section>
+  );
 }
