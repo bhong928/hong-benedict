@@ -28,7 +28,7 @@ export default function HeroSection() {
       {/* Foreground Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
         <h1 className="text-4xl font-bold">Hello, I am Benedict!</h1>
-        <p className="mt-4 text-lg">Software Developer, Michigan Alumni, and Creator</p>
+        <p className="mt-4 text-lg">Software Developer, Mix/Mastering Engineer, and Creator</p>
         <a href="#about" className="mt-8 bg-white text-black rounded-full px-6 py-2 hover:bg-gray-300 transition cursor-pointer">
           Discover More
         </a>
