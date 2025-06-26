@@ -3,7 +3,7 @@ export default function Education() {
 
     return(
         <section className="p-20 bg-white">
-            <h2 className="text-3xl font-bold mb-12 text-gray-600">Education</h2>
+            <h2 className="text-3xl font-bold mb-12 text-gray-700">Education</h2>
             <div className="relative space-y-12 ml-6 border-l-2 border-gray-400">
 
                 {/* University of Michigan */}
