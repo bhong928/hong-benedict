@@ -14,7 +14,7 @@ export default function AboutSection(){
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-            <div className="flex flex-col md:flex-row justify-between gap-10 max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between gap-10 max-w-7xl mx-auto items-center">
                 {/* Personal Info on the left */}
                 <div className="flex-1 space-y-4">
                     {/* Info */}
