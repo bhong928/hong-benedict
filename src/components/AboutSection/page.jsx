@@ -21,22 +21,22 @@ export default function AboutSection(){
                     <div className="space-y-4">
 
                         <div className="flex justify-between border-b border-gray-300 pb-2">
-                            <span className="text-black">Name:</span>
+                            <span className="text-black font-semibold">Name:</span>
                             <span className="text-gray-500">Benedict Hong</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-300 pb-2">
-                            <span className="text-black">Age:</span>
+                            <span className="text-black font-semibold">Age:</span>
                             <span className="text-gray-500">26</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-300 pb-2">
-                            <span className="text-black">Location:</span>
+                            <span className="text-black font-semibold">Location:</span>
                             <span className="text-gray-500">Dallas, Texas</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-300 pb-2">
-                            <span className="text-black">School:</span>
+                            <span className="text-black font-semibold">School:</span>
                             <span className="text-gray-500">University of Michigan</span>
                         </div>
 
@@ -59,7 +59,7 @@ export default function AboutSection(){
                 {/* Right: Bio + Resume */}
                 <div className="flex-1 space-y-6">
                 <div className="text-gray-500">
-                    <h2 className="text-xl font-semibold mb-2">A little bit about me...</h2>
+                    <h2 className="text-2xl font-semibold mb-2">A little bit about me...</h2>
                     <p className="mb-4">
                     I am a recent Software Engineering graduate from the University of Michigan with a passion for building clean, user-friendly web applications. I enjoy solving real world problems through code and have experience with technologies like React, Next.js, Tailwind CSS, Python, and Firebase. 
                     </p>
@@ -76,7 +76,7 @@ export default function AboutSection(){
                 <a 
                     href='/BenedictHong_Resume.pdf'
                     download
-                    className="border text-gray-500 px-6 py-3 hover:bg-blue-200 transition cursor-pointer"
+                    className="border text-gray-500 px-6 py-3 hover:bg-blue-200 transition cursor-pointer font-bold"
                 >
                     Download Resume
                 </a>
