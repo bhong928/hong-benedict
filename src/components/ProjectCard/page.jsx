@@ -47,7 +47,7 @@ export default function Projects() {
             variants={container}
             initial="hidden"
             whileInView="show"
-            viewport={{amount: 0.8}}
+            viewport={{once: true, amount: 0.8}}
         >
           {projects.map((project, index) => (
             <motion.div 
