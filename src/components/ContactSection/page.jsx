@@ -78,7 +78,7 @@ export default function Contact() {
                         value={formData.subject}
                         placeholder="Subject"
                         onChange={handleChange}
-                        className="w-full p-3 border border-gray-300 rounded"
+                        className="w-full p-3 border border-gray-300 rounded text-white"
                     />
                     {/* Message */}
                     <textarea
