@@ -26,14 +26,14 @@ export default function Projects() {
         hidden: {},
         show: {
             transition: {
-                staggerChildren: 0.5, // Delay between each card
+                staggerChildren: 0.2, // Delay between each card
             },
         },
     };
 
     const cardVariants = {
-        hidden: { opacity: 0, y: 30 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
     };
 
   return (
@@ -52,7 +52,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <motion.div 
                 key={index} 
-                className="bg-gray-700 text-white p-6 rounded-lg shadow hover:shadow-lg transition"
+                className="bg-gray-700 text-white p-6 rounded-lg shadow hover:shadow-lg transition will-change-transform"
                 variants={cardVariants}
             >
                 <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
@@ -82,7 +82,7 @@ export default function Projects() {
                         href={project.github} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-block text-sm text-whitehover:underline"
+                        className="inline-block text-sm text-white hover:underline"
                         >
                             <GitHub className="hover:text-purple-600"/>
                         </a>
