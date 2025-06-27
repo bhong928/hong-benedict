@@ -3,7 +3,7 @@ export default function Experience() {
 
     return(
         <section className="px-4 py-10 sm:px-10 sm:py-16 md:px-20 md:py-20 bg-gray-700">
-            <h2 className="text-3xl font-bold mb-12">Experience</h2>
+            <h2 className="text-3xl font-bold mb-12 text-white">Experience</h2>
             <div className="relative space-y-12 ml-6 border-l-2 border-gray-400 ">
 
                 {/* Veoneer Experience */}
