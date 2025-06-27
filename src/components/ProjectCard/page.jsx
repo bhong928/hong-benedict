@@ -1,18 +1,23 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Layout, GitHub } from 'react-feather';
 
 export default function Projects() {
     const projects = [
         {
             title: "EHTS Wrist Worn Bias Detector",
-            description: "Description of what my project does",
-            tags: ["React, Firebase"],
+            description: "EHTS is a full-stack web application designed to help companies monitor employee health test data like heart rate and oxygenation levels to detect potential bias. Users can register, add employees, and view detailed test results via interactive charts.",
+            tags: ["React+Vite, Tailwind CSS, Firebase"],
+            github: "https://github.com/ehtsdeveloper/BiasDetector",
+            project_site: "https://ehts-project.web.app/Login",
         },
         {
-            title: "Another Project",
-            description: "Description",
-            tags: ["Tech"],
+            title: "Green or Not",
+            description: "Green or Not is a web application designed to assess the sustainability of products sold on Amazon. It works by scraping product detail from Amazon pages and calculating a sustainability score based on eco-friendly keywords and recognized certifications. A custom tree image visually reflects the products “green” score, helping users quickly gauge the environmental impact of a product.",
+            tags: ["NextJS, Tailwind CSS, Axios, Cheerios"],
+            github: "https://github.com/bhong928/green-or-not",
+            project_site: "https://green-or-not.vercel.app/",
         }
     ];
 
@@ -21,14 +26,14 @@ export default function Projects() {
         hidden: {},
         show: {
             transition: {
-                staggerChildren: 0.3, // Delay between each card
+                staggerChildren: 0.5, // Delay between each card
             },
         },
     };
 
     const cardVariants = {
         hidden: { opacity: 0, y: 30 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+        show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
     };
 
   return (
@@ -50,13 +55,41 @@ export default function Projects() {
                 className="bg-gray-700 text-white p-6 rounded-lg shadow hover:shadow-lg transition"
                 variants={cardVariants}
             >
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-sm text-gray-300 mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
+                <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
+                <p className="text-sm text-gray-300 mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
                 {project.tags.map((tag, idx) => (
-                  <span key={idx} className="bg-gray-700 text-xs rounded-full font-extralight italic">{tag}</span>
+                    <span key={idx} className="bg-gray-700 text-xs rounded-full font-extralight italic">{tag}</span>
                 ))}
-              </div>
+                </div>
+                
+                <div className='mb-2 flex space-x-4'>
+                {/* Project Website Link (only if exists) */}
+                    {project.project_site && (
+                        <a 
+                        href={project.project_site} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-block text-sm text-white hover:underline"
+                        >
+                            <Layout className="hover:text-blue-300 "/>
+                        </a>
+                    )}
+
+                    {/* GitHub Link (only if exists) */}
+                    {project.github && (
+                        <a 
+                        href={project.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-block text-sm text-whitehover:underline"
+                        >
+                            <GitHub className="hover:text-purple-600"/>
+                        </a>
+                    )}
+
+                </div>
+                
             </motion.div>
           ))}
         </motion.div>
