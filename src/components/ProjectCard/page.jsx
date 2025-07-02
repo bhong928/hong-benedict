@@ -6,9 +6,16 @@ import { Layout, GitHub } from 'react-feather';
 export default function Projects() {
     const projects = [
         {
+            title: "RateMyCourse",
+            description: "RateMyCourse is a modern, full-stack web application that allows users to browse, review, and discover golf courses across the United States. Inspired by platforms like RateMyDorm, it features user authentication with Google and passwordless email login, a responsive UI, and dynamic data pulled from Firebase Firestore. Users can view popular states and courses, and leave or read reviews — with support for user dashboards and post management.",
+            tags: ["React(Vite), Tailwind CSS, Firebase(Firestore & Auth), Vercel"],
+            github: "https://github.com/bhong928/rate-my-course",
+            project_site: "https://rate-my-course-green.vercel.app/",
+        },
+        {
             title: "EHTS Wrist Worn Bias Detector",
             description: "EHTS is a full-stack web application designed to help companies monitor employee health test data like heart rate and oxygenation levels to detect potential bias. Users can register, add employees, and view detailed test results via interactive charts.",
-            tags: ["React+Vite, Tailwind CSS, Firebase"],
+            tags: ["React(Vite), Tailwind CSS, Firebase(Firestore & Auth)"],
             github: "https://github.com/ehtsdeveloper/BiasDetector",
             project_site: "https://ehts-project.web.app/Login",
         },
@@ -40,7 +47,6 @@ export default function Projects() {
     <section className="bg-gray-400 px-4 py-10 sm:px-10 sm:py-16 md:px-20 md:py-20" id="projects">
       <div className="max-w-6xl">
         <h2 className="text-white text-3xl font-bold mb-4">Projects</h2>
-        <p className="text-sm text-white mb-10">Click on any project to learn more</p>
 
         <motion.div 
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
