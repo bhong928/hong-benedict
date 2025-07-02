@@ -45,7 +45,7 @@ export default function Projects() {
 
   return (
     <section className="bg-gray-400 px-4 py-10 sm:px-10 sm:py-16 md:px-20 md:py-20" id="projects">
-      <div className="max-w-6xl">
+      <div className="max-w-6xl w-full mx-auto">
         <h2 className="text-white text-3xl font-bold mb-4">Projects</h2>
 
         <motion.div 
@@ -53,7 +53,7 @@ export default function Projects() {
             variants={container}
             initial="hidden"
             whileInView="show"
-            viewport={{once: true, amount: 0.8}}
+            viewport={{once: true, amount: 0.3}}
         >
           {projects.map((project, index) => (
             <motion.div 
@@ -62,7 +62,7 @@ export default function Projects() {
                 variants={cardVariants}
             >
                 <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
-                <p className="text-sm text-gray-300 mb-4">{project.description}</p>
+                <p className="text-sm text-gray-300 mb-4 break-words">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
                 {project.tags.map((tag, idx) => (
                     <span key={idx} className="bg-gray-700 text-xs rounded-full font-extralight italic">{tag}</span>
