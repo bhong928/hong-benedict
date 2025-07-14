@@ -44,7 +44,7 @@ export default function AboutSection(){
 
                     {/* Socials */}
                     <div className="flex space-x-6 text-gray-700 text-2xl">
-                        <a href="https://www.instagram.com/_benhong/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/_benedict_hong/" target="_blank" rel="noopener noreferrer">
                             <Instagram className="hover:text-blue-300 " />
                         </a>
                         <a href="https://www.linkedin.com/in/benedict-hong-5396091a1/" target="_blank" rel="noopener noreferrer">
