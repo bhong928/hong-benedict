@@ -19,29 +19,45 @@ export default function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // reCAPTCHA
+
+        // CAPTCHA
         if (!captchaToken) {
             alert("Please complete the CAPTCHA.");
             return;
         }
-        // EmailJS
+
+        // Custom validation
+        const { name, email, subject, message } = formData;
+
+        if (
+            !name.trim() ||
+            !email.trim() ||
+            !email.includes('@') ||
+            !subject.trim() ||
+            !message.trim()
+        ) {
+            alert("Please fill out all fields correctly.");
+            return;
+        }
+
+        // Send form using EmailJS
         emailjs
             .sendForm(
-                'service_cbem8rb', // Email Service ID
-                'template_tdxqlw3', // Email Template ID
-                formRef.current,
-                '9MW0KMv2MI57ops_I' // Public Key
+            'YOUR_SERVICE_ID',
+            'YOUR_TEMPLATE_ID',
+            formRef.current,
+            'YOUR_PUBLIC_KEY'
             )
             .then(() => {
-                alert("Message Sent!");
-                setFormData({name: "", email: "", subject: "", message: ""});
-                setCaptchaToken(null); // Reset captcha
+            alert("Message Sent!");
+            setFormData({ name: "", email: "", subject: "", message: "" });
+            setCaptchaToken(null);
             })
-            .catch((error) => {1
-                console.error("EmailJS Error:", error);
-                alert("Something went wrong. Please try again.")
-            })
-    }
+            .catch((error) => {
+            console.error("EmailJS Error:", error);
+            alert("Something went wrong. Please try again.");
+            });
+        };
 
     return(
         <section className="bg-gray-900 px-4 py-10 sm:px-10 sm:py-16 md:px-20 md:py-20">
