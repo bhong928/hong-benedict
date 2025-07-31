@@ -8,7 +8,7 @@ export default function AboutSection(){
     return(
         <motion.section
             id="about"
-            className="bg-white px-6 py-16"
+            className="bg-black px-6 py-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -21,7 +21,7 @@ export default function AboutSection(){
                     <div className="space-y-4">
 
                         <div className="flex justify-between border-b border-gray-300 pb-2">
-                            <span className="text-black font-semibold">Name:</span>
+                            <span className="text-white font-semibold">Name:</span>
                             <span className="text-gray-500">Benedict Hong</span>
                         </div>
 

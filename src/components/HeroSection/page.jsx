@@ -7,31 +7,65 @@ import { useRef } from 'react';
 export default function HeroSection() {
   const ref = useRef(null);
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 175]); // Adjust values as needed
+  const y = useTransform(scrollY, [0, 600], [0, 250]); // Adjust values as needed
 
   return (
-    <section ref={ref} className="relative w-full h-screen overflow-hidden">
-      {/* Animated Background */}
-      <motion.div
-        style={{ y }}
-        className="absolute inset-0 z-0"
+    <section
+      ref={ref}
+      className="relative w-full overflow-hidden h-auto md:h-[60vh]
+                text-white md:text-black 
+                bg-cover bg-center bg-no-repeat 
+                bg-[url('/images/me.jpg')] md:bg-none filter grayscale md:grayscale-0 md:filter-none"
       >
-        <Image
-          src="/images/me.jpg"
-          alt="Picture of Benedict"
-          fill
-          priority
-          className="object-cover"
-        />
-      </motion.div>
+      <div className='w-full h-full flex flex-col md:flex-row md:items-center md:justify-between md:p-4'>
+        <div className='flex flex-col md:w-1/2'>
+          {/* NAME */}
+          <div className='text-center'>
+            <motion.h1 
+              className='text-[10vw] font-black uppercase md:text-[5vw]'
+              initial = {{ opacity: 0, x:-50 }}
+              animate = {{ opacity: 1, x: 0 }}
+              transition = {{ duration: 1 }}
+            >
+              BENEDICT
+            </motion.h1>
+            <motion.h1
+              className="text-[10vw] md:text-[5vw] font-black uppercase"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
+              HONG
+            </motion.h1>
+          </div>
 
-      {/* Foreground Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
-        <h1 className="text-4xl font-bold">Hello, I am Benedict!</h1>
-        <p className="mt-4 text-lg">Software Developer, Mix/Mastering Engineer, and Creator</p>
-        <a href="#about" className="mt-8 bg-white text-black rounded-full px-6 py-2 hover:bg-gray-300 transition cursor-pointer">
-          Discover More
-        </a>
+          {/* Details */}
+          <div className='px-4 mt-8 text-center'>
+            <p className='text-[2vw] md:text-[1vw] uppercase tracking-widest'>
+              Software Developer / <br /> Creative Technologist
+            </p>
+            <a
+              href="#contact"
+              className="mt-4 mb-4 inline-block border border-white md:border-black text-[2vw] md:text-[1vw] px-2 py-1 tracking-widest uppercase text-white md:text-black hover:bg-black hover:text-white transition rounded-sm"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </div>
+
+        {/* Image */}
+        <motion.div 
+          className='relative hidden md:block w-full md:w-[50vw] md:h-[50vh] md:aspect-[4/5] border rounded-sm'
+          style={{y}}
+        >
+          <Image
+            src="/images/me.jpg"
+            alt="Picture of Benedict"
+            fill
+            priority
+            className="grayscale contrast-110 object-cover  "
+          />
+        </motion.div>  
       </div>
     </section>
   );

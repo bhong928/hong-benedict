@@ -60,7 +60,7 @@ export default function Contact() {
         };
 
     return(
-        <section className="bg-gray-900 px-4 py-10 sm:px-10 sm:py-16 md:px-20 md:py-20">
+        <section id="contact" className="bg-gray-900 px-4 py-10 sm:px-10 sm:py-16 md:px-20 md:py-20 scroll-mt-24">
             <div className="max-w-6xl">
                 <h1 className="text-3xl font-bold mb-4 text-white">Get in touch</h1>
                 <p className="text-sm text-white mb-10">If you want to contact me, fill out the following form and I will try my best to get back to you
