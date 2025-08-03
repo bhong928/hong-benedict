@@ -60,13 +60,15 @@ export default function Contact() {
         };
 
     return(
-        <section id="contact" className="bg-gray-900 px-4 py-10 sm:px-10 sm:py-16 md:px-20 md:py-20 scroll-mt-24">
-            <div className="max-w-6xl">
-                <h1 className="text-3xl font-bold mb-4 text-white">Get in touch</h1>
-                <p className="text-sm text-white mb-10">If you want to contact me, fill out the following form and I will try my best to get back to you
-                </p>
+        <section id="contact" className="p-5 md:p-20 bg-[#2c2c2c] scroll-mt-24">
+            <div className="flex flex-col md:flex-row w-full">
+                <div className='md:flex md:flex-col md:justify-center md:max-w-3xl'>
+                    <h1 className="text-xl md:text-3xl font-bold mb-4 text-white text-center">Get in touch</h1>
+                    <p className="text-xs md:text-xl text-white mb-10">If you want to contact me, fill out the following form and I will try my best to get back to you
+                    </p>
+                </div>
 
-                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 max-w-3xl">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 w-full">
                     <div className="grid sm:grid-cols-2 gap-6 text-white">
                     {/* Name */}
                         <input
@@ -107,7 +109,7 @@ export default function Contact() {
                         required
                     />
                     {/* reCAPTCHA slot here */}
-                    <div className="pt-2">
+                    <div className="pt-2 flex justify-center">
                         <ReCAPTCHA
                             sitekey="6LeU3W8rAAAAAHFaZvde9R_sqBpc_F5FE1zbw-Gw" // Site Key
                             onChange={(token) => setCaptchaToken(token)}

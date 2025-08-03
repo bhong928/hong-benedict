@@ -44,12 +44,12 @@ export default function Projects() {
     };
 
   return (
-    <section className="bg-gray-400 px-4 py-10 sm:px-10 sm:py-16 md:px-20 md:py-20" id="projects">
-      <div className="max-w-6xl w-full mx-auto">
-        <h2 className="text-white text-3xl font-bold mb-4">Projects</h2>
+    <section className="p-5 md:p-20 bg-[#F1F0EA]" id="projects">
+      <div className="w-full mx-auto">
+        <h2 className="text-[#2c2c2c] text-3xl font-bold mb-4 text-center md:text-left">Projects</h2>
 
         <motion.div 
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 min-h-[400px]"
             variants={container}
             initial="hidden"
             whileInView="show"
@@ -58,44 +58,45 @@ export default function Projects() {
           {projects.map((project, index) => (
             <motion.div 
                 key={index} 
-                className="bg-gray-700 text-white p-6 rounded-lg shadow hover:shadow-lg transition will-change-transform"
+                className="bg-[#2c2c2c] text-white p-6 rounded-lg shadow hover:shadow-lg transition will-change-transform flex flex-col justify-between h-full"
                 variants={cardVariants}
             >
-                <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
-                <p className="text-sm text-gray-300 mb-4 break-words">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                {project.tags.map((tag, idx) => (
-                    <span key={idx} className="bg-gray-700 text-xs rounded-full font-extralight italic">{tag}</span>
-                ))}
+              <div className="flex flex-col justify-between h-full">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-center">{project.title}</h3>
+                  <p className="text-sm md:text-lg text-gray-300 mb-4 break-words">{project.description}</p>
+                  <div className="flex mb-6">
+                  {project.tags.map((tag, idx) => (
+                      <span key={idx} className="bg-gray-500 text-xs md:text-sm px-4 rounded-lg items-center justify-center font-extralight italic">{tag}</span>
+                  ))}
+                  </div>
                 </div>
-                
-                <div className='mb-2 flex space-x-4'>
-                {/* Project Website Link (only if exists) */}
-                    {project.project_site && (
-                        <a 
-                        href={project.project_site} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-block text-sm text-white hover:underline"
-                        >
-                            <Layout className="hover:text-blue-300 "/>
-                        </a>
-                    )}
+                <div className='flex items-center justify-center space-x-4 mt-4'>
+                  {/* Project Website Link (only if exists) */}
+                  {project.project_site && (
+                      <a 
+                      href={project.project_site} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block text-sm text-white hover:underline"
+                      >
+                          <Layout className="hover:text-blue-300 "/>
+                      </a>
+                  )}
 
-                    {/* GitHub Link (only if exists) */}
-                    {project.github && (
-                        <a 
-                        href={project.github} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-block text-sm text-white hover:underline"
-                        >
-                            <GitHub className="hover:text-purple-600"/>
-                        </a>
-                    )}
-
+                  {/* GitHub Link (only if exists) */}
+                  {project.github && (
+                      <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block text-sm text-white hover:underline"
+                      >
+                          <GitHub className="hover:text-purple-600"/>
+                      </a>
+                  )}
                 </div>
-                
+              </div>
             </motion.div>
           ))}
         </motion.div>

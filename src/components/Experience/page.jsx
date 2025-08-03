@@ -2,16 +2,16 @@
 export default function Experience() {
 
     return(
-        <section className="px-4 py-10 sm:px-10 sm:py-16 md:px-20 md:py-20 bg-gray-700">
-            <h2 className="text-3xl font-bold mb-12 text-white">Experience</h2>
-            <div className="relative space-y-12 ml-6 border-l-2 border-gray-400 ">
+        <section className="p-5 md:p-20 bg-[#F1F0EA]">
+            <h2 className="text-3xl font-bold mb-12 text-[#2c2c2c] text-center md:text-left ">Experience</h2>
+            <div className="relative space-y-12 ml-2 border-l-2 border-gray-400 ">
 
                 {/* Veoneer Experience */}
                 <div className="relative pl-8">
                 {/* Bullet */}
-                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-gray-700 border-2 border-white rounded-full"></div>
+                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-[#2c2c2c] border-2 border-white rounded-full"></div>
 
-                    <div className="bg-gray-50 p-6 rounded-md shadow border text-black overflow-hidden">
+                    <div className="bg-gray-50 p-6 rounded-md shadow border text-[#2c2c2c] overflow-hidden">
                         <h3 className="text-lg font-semibold">Veoneer</h3>
                         <p className="italic text-sm text-gray-500">Applications Engineer Intern | April 2024 - June 2025</p>
                         <ul className="list-disc">
@@ -26,8 +26,8 @@ export default function Experience() {
                 {/* Logitech Experience */}
                 <div className="relative pl-8">
                 {/* Bullet */}
-                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-gray-700 border-2 border-white rounded-full"></div>
-                    <div className="bg-gray-50 p-6 rounded-md shadow border text-black overflow-hidden">
+                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-[#2c2c2c] border-2 border-white rounded-full"></div>
+                    <div className="bg-gray-50 p-6 rounded-md shadow border text-[#2c2c2c] overflow-hidden">
                         <h3 className="text-lg font-semibold">Logitech - Blue Microphones</h3>
                         <p className="italic text-sm text-gray-500">Technician | March - July 2021</p>
                         <ul className="list-disc">
@@ -40,8 +40,8 @@ export default function Experience() {
                 {/* Audio Engineer Experience */}
                 <div className="relative pl-8">
                 {/* Bullet */}
-                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-gray-700 border-2 border-white rounded-full"></div>
-                    <div className="bg-gray-50 p-6 rounded-md shadow border text-black overflow-hidden">
+                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-[#2c2c2c] border-2 border-white rounded-full"></div>
+                    <div className="bg-gray-50 p-6 rounded-md shadow border text-[#2c2c2c] overflow-hidden">
                         <h3 className="text-lg font-semibold">Blue Tint Recording Studios</h3>
                         <p className="italic text-sm text-gray-500">Head Audio Engineer | Dec 2020 - July 2021</p>
                         <ul className="list-disc">

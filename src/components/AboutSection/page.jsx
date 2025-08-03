@@ -16,39 +16,39 @@ export default function AboutSection(){
     return(
         <motion.section
             id="about"
-            className="bg-[#2c2c2c] px-6 py-16"
+            className="bg-[#2c2c2c] p-10 md:p-20"
             {...fadeUp}
         >
             <div className="flex flex-col lg:flex-row justify-between gap-20 items-center">
                 {/* Personal Info on the left */}
-                <div className="flex-1 space-y-4 max-w-3xl">
+                <div className="flex-1 space-y-4 max-w-2xl">
                     {/* Info */}
-                    <div className="space-y-4 w-full text-[4vw] md:text-[2vw] lg:text-[1vw]">
+                    <div className="space-y-4 w-full text-sm md:text-lg">
 
                         <div className="flex justify-between border-b border-gray-300 pb-2 uppercase">
-                            <span className="text-gray-400 font-semibold">Name:</span>
+                            <span className="text-gray-200 font-semibold">Name:</span>
                             <span className="text-gray-200">Benedict Hong</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-300 pb-2 uppercase">
-                            <span className="text-gray-400 font-semibold">Age:</span>
+                            <span className="text-gray-200 font-semibold">Age:</span>
                             <span className="text-gray-200">26</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-300 pb-2 uppercase">
-                            <span className="text-gray-400 font-semibold">Location:</span>
+                            <span className="text-gray-200 font-semibold">Location:</span>
                             <span className="text-gray-200">Dallas, Texas</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-300 pb-2 uppercase">
-                            <span className="text-gray-400 font-semibold">School:</span>
+                            <span className="text-gray-200 font-semibold pr-5">School:</span>
                             <span className="text-gray-200">University of Michigan</span>
                         </div>
 
                     </div>
 
                     {/* Socials */}
-                    <div className="flex space-x-6 text-gray-200">
+                    <div className="flex items-center justify-center space-x-6 text-gray-200">
                         <a href="https://www.instagram.com/_benedict_hong/" target="_blank" rel="noopener noreferrer">
                             <Instagram className="hover:text-blue-300 " />
                         </a>
@@ -62,18 +62,18 @@ export default function AboutSection(){
                 </div>
 
                 {/* Right: Bio + Resume */}
-                <div className="flex-1 space-y-20 text-[4vw] md:text-[2vw] lg:text-[1vw] text-center">
-                    <div className="text-gray-200">
-                        <h2 className="text-2xl font-semibold mb-2 upper">A little bit about me...</h2>
-                        <p className="mb-4">
+                <div className="flex-1 ">
+                    <div className="text-gray-200 mb-10 ">
+                        <h2 className="text-xl font-semibold mb-2">A little bit about me...</h2>
+                        <p className="mb-4 text-sm md:text-lg">
                         I am a recent Software Engineering graduate from the University of Michigan with a passion for building clean, user-friendly web applications. I enjoy solving real world problems through code and have experience with technologies like React, Next.js, Tailwind CSS, Python, and Firebase. 
                         </p>
                         
-                        <p className="mb-4">
+                        <p className="mb-4 text-sm md:text-lg ">
                         Previously, I worked as an Applications Engineer Intern at Veoneer, where I contributed to the development and testing of airbag modules and sensors for major OEMs. That expereience taught me the importance of percision, collaboration, and building systems that prioritize safety and reliability.
                         </p>
 
-                        <p className="mb-4">
+                        <p className="mb-4 text-sm md:text-lg">
                         Outside of coding, I am a Musician, Mix/Mastering Engineer, and Creator who enjoys collaborating with others to bring ideas to life! 
                         </p>
                     </div>
@@ -81,7 +81,7 @@ export default function AboutSection(){
                     <a 
                         href='/BenedictHong_Resume.pdf'
                         download
-                        className="border rounded-sm text-gray-200 px-6 py-3 hover:bg-blue-200 hover:text-gray-400 transition cursor-pointer font-bold"
+                        className="flex items-center justify-center border rounded-sm text-gray-200 px-6 py-3 hover:bg-blue-200 hover:text-gray-800 transition cursor-pointer font-bold"
                     >
                         Download Resume
                     </a>

@@ -2,14 +2,14 @@
 export default function Education() {
 
     return(
-        <section className="px-4 py-10 sm:px-10 sm:py-16 md:px-20 md:py-20 bg-white">
-            <h2 className="text-3xl font-bold mb-12 text-gray-700">Education</h2>
-            <div className="relative space-y-12 ml-6 border-l-2 border-gray-400">
+        <section className="p-5 md:p-20 bg-[#2c2c2c]">
+            <h2 className="text-3xl font-bold mb-12 text-[#F1F0EA] text-center md:text-left">Education</h2>
+            <div className="relative space-y-12 ml-2 border-l-2 border-gray-400">
 
                 {/* University of Michigan */}
                 <div className="relative pl-8">
                 {/* Bullet */}
-                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-gray-700 border-2 border-white rounded-full"></div>
+                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-[#F1F0EA] border-2 border-white rounded-full"></div>
                     <div className="bg-gray-50 p-6 rounded-md shadow border text-black overflow-hidden">
                         <h3 className="text-lg font-semibold">University of Michigan - Dearborn</h3>
                         <p className="italic text-sm text-gray-500">B.S. in Software Engineering | August 2022 - June 2025</p>
@@ -24,7 +24,7 @@ export default function Education() {
                 {/* CRAS Audio Certification */}
                 <div className="relative pl-8">
                 {/* Bullet */}
-                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-gray-700 border-2 border-white rounded-full"></div>
+                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-[#F1F0EA] border-2 border-white rounded-full"></div>
                     <div className="bg-gray-50 p-6 rounded-md shadow border text-black overflow-hidden">
                         <h3 className="text-lg font-semibold">Conservatory of Recording Arts and Sciences</h3>
                         <p className="italic text-sm text-gray-500">Audio Engineering Certificate | Novemeber 2019 - December 2020</p>
